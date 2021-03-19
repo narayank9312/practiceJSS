@@ -44,10 +44,47 @@
 // const age4 = calcAge4(1997);
 // console.log(age3, age4);
 
-const yearOfRetirement = (BOY, name) => {
+// const yearOfRetirement = (BOY, name) => {
+//   const age = 2037 - BOY;
+//   const retire = 65 - age;
+//   console.log(`this person having name ${name} retire in ${retire} years`);
+// };
+
+// yearOfRetirement(2017, 'manish');
+
+// function calling othet function
+
+// function fruitCutPieces(fruit) {
+//   return fruit * 4;
+// }
+
+// function fruitProcessor(apples, banana) {
+//   const applePieces = fruitCutPieces(apples);
+//   const bananaPieces = fruitCutPieces(banana);
+
+//   console.log(applePieces, bananaPieces);
+//   const juice = `juice with ${applePieces} apples and ${bananaPieces} banana`;
+//   return juice;
+// }
+
+// fruitProcessor(4, 5q);
+
+const calcAge = (BOY) => {
   const age = 2037 - BOY;
-  const retire = 65 - age;
-  console.log(`this person having name ${name} retire in ${retire} years`);
+  return age;
 };
 
-yearOfRetirement(2017, 'manish');
+const yearOfRetirement = (name, BOY) => {
+  const age1 = calcAge(BOY);
+  const age2 = 65 - age1;
+  if (age2 > 0) {
+    console.log(`${name} retire after ${age2} year`);
+    return age2;
+  } else {
+    console.log(`congratulation ${name} for retired `);
+    return -1;
+  }
+};
+
+console.log(yearOfRetirement('vineet', 1990));
+console.log(yearOfRetirement('ajeet', 1940));
