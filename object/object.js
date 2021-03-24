@@ -82,3 +82,32 @@
 // console.log(studentInformation.getSummary());
 
 // coding challange
+
+const person1 = {
+  fullName: 'Mark Miller',
+  mass: 78,
+  height: 1.69,
+};
+
+const person2 = {
+  fullName: 'john smith',
+  mass: 92,
+  height: 1.95,
+};
+
+const Bmi = (mass, height) => {
+  return mass / (height * height);
+};
+
+const bmi1 = Bmi(person1.mass, person1.height);
+const bmi2 = Bmi(person2.mass, person2.height);
+
+const check = (bmi1, bmi2) => {
+  if (bmi1 > bmi2) {
+    console.log(
+      `${person1.fullName}'s ${bmi1} is higher then ${person2.fullName}'s ${bmi2} !`
+    );
+  }
+};
+
+check(bmi1, bmi2);
